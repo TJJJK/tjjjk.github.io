@@ -30,8 +30,7 @@
 滕健凯的个人主页 <span class="orange"> </span>
   </h1>
   <h2> 
-信号与系统课程学习<span class="orange">： </span>
-  </h2>
+信号与系统课程学习<span class="orange">： </span></h2>
 </header>
 <nav>
       <ul>

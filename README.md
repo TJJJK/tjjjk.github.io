@@ -1,5 +1,3 @@
-# tjjjk.github.io
-# TJK的blog
 <!doctype html>
 <html>
 <head>

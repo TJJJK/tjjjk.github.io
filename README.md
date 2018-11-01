@@ -1,4 +1,17 @@
-         }
+ <!doctype html>
+ <html>
+ <head>
+     <title>Later3.github.io</title>
+ <link href="style.css" rel="stylesheet"  type="text/css" />
+ <meta charset="utf-8">
+ <base target="_blank">
+ <style>
+     body{
+         background-image: url('/u.jpg');
+                     background-size: 100%;
+                 background-repeat: repeat-x;
+          }
+        }
     h1{
             font-family: 微软雅黑;
             font-size: 50px;

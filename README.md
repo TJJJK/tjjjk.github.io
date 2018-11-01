@@ -19,7 +19,7 @@
         }
     h2{
         font-family:微软雅黑;
-        font-size: 45px;
+        font-size: 35px;
         color: brown;
         }
     </style> 

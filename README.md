@@ -42,8 +42,6 @@
            <li><a href="链接栏">四.其他</a></li>
            <li><a href="http://www.baidu.com">五.百度</a></li>
            <li><a href="http://epub.cnki.net/kns/default.htm">六.中国知网</a><li>
-      </ul>
-</nav> 
 <div id="content">
     <section>
     <h2>信号与系统:</h2></div>

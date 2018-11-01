@@ -40,6 +40,7 @@
            <li><a href="链接栏">三.学习笔记</a></li>
            <li><a href="链接栏">四.其他</a></li>
            <li><a href="http://www.baidu.com">五.百度</a></li>
+           <li><a href="http://www.bilibili.com">六.哔哩哔哩</a><li>
       </ul>
 </nav> 
 <div id="content">

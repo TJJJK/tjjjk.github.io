@@ -1,8 +1,8 @@
-
+<!doctype html>
 <html>
 <head>
     <title>Later3.github.io</title>
-
+<link href="style.css" rel="stylesheet"  type="text/css" />
 <meta charset="utf-8">
 <base target="_blank">
 <style>

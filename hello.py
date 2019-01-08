@@ -51,5 +51,6 @@ pl.subplot(224)
 pl.title(u'频率为5Hz的正弦频谱图')
 pl.plot(axis_xf,xf_abs)
 pl.axis('tight')
+pl.savefig(r"temp.png")
  
 pl.show()

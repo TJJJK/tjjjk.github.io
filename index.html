@@ -53,25 +53,25 @@
 							<article id="work">
 								<h2 class="major">大作业</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>连续时间实指数信号
+								<p>连续时间实指数信号</p>
 
-									import numpy as np 
-									import matplotlib as mpl
-									import matplotlib.pyplot as plt
-									import mpl_toolkits.axisartist as axisartist
-									fig = plt.figure()
-									ax = axisartist.Subplot(fig, 111) 
-									fig.add_axes(ax)
-									ax.axis[:].set_visible(False)
-									ax.axis["x"] = ax.new_floating_axis(0,-0.8)
-									ax.axis["x"].set_axisline_style("->", size = 1.0)
-									ax.axis["y"] = ax.new_floating_axis(1,0)
-									ax.axis["y"].set_axisline_style("-|>", size = 1.0)
-									ax.axis["x"].set_axis_direction("top")
-									ax.axis["y"].set_axis_direction("right") 
-									t = np.arange(-5,5,0.1)
-									s = 0.5
-									y = np.e**(s*t)
+									<p>import numpy as np</p> 
+									<p>import matplotlib as mpl</p>
+									<p>import matplotlib.pyplot as plt</p>
+									<p>import mpl_toolkits.axisartist as axisartist</p>
+									<p>fig = plt.figure()</p>
+									<p>ax = axisartist.Subplot(fig, 111)</p> 
+									<p>fig.add_axes(ax)</p>
+									<p>ax.axis[:].set_visible(False)</p>
+									<p>ax.axis["x"] = ax.new_floating_axis(0,-0.8)</p>
+									<p>ax.axis["x"].set_axisline_style("->", size = 1.0)</p>
+									<p>ax.axis["y"] = ax.new_floating_axis(1,0)</p>
+									<p>ax.axis["y"].set_axisline_style("-|>", size = 1.0)</p>
+									<p>ax.axis["x"].set_axis_direction("top")</p>
+									<p>ax.axis["y"].set_axis_direction("right")</p> 
+									<p>t = np.arange(-5,5,0.1)</p>
+									<p>s = 0.5</p>
+									<p>y = np.e**(s*t)</p>
 									s = -0.5
 									y_1 = np.e**(s*t)
 									s = 0

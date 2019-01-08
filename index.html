@@ -90,7 +90,46 @@
 												<p>plt.plot(t,y_2)</p>
 													<p>plt.show()</p></0>
 								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
+
+							<span class="image main"><img src="images/图1-13.png" alt="" /></span>
+							<p>连续时间实指数信号</p>
+
+								<p>import numpy as np</p> 
+								<p>import matplotlib as mpl</p>
+								<p>import matplotlib.pyplot as plt</p>
+								<p>import mpl_toolkits.axisartist as axisartist</p>
+								<p>fig = plt.figure()</p>
+								<p>ax = axisartist.Subplot(fig, 111)</p> 
+								<p>fig.add_axes(ax)</p>
+								<p>ax.axis[:].set_visible(False)</p>
+								<p>ax.axis["x"] = ax.new_floating_axis(0,-0.8)</p>
+								<p>ax.axis["x"].set_axisline_style("->", size = 1.0)</p>
+								<p>ax.axis["y"] = ax.new_floating_axis(1,0)</p>
+								<p>ax.axis["y"].set_axisline_style("-|>", size = 1.0)</p>
+								<p>ax.axis["x"].set_axis_direction("top")</p>
+								<p>ax.axis["y"].set_axis_direction("right")</p> 
+								<p>t = np.arange(-5,5,0.1)</p>
+								<p>s = 0.5</p>
+								<p>y = np.e**(s*t)</p>
+								<p></p>s = -0.5</p>
+								<p></p>y_1 = np.e**(s*t)</p>
+								<p></p>s = 0</p>
+								<p></p>y_2 = np.e**(s*t)</p>
+								<p></p>plt.title(r'$x(t)=Ce^{st},s=\sigma+jw_0$')</p>
+								<p></p>plt.xticks([])</p>
+								<p></p>plt.yticks([])</p>
+								<p></p>plt.ylim(-0.8,10)</p>
+								<p></p>plt.text(0,-1.2,'0',fontdict={'size':16})</p>
+								<p></p>plt.text(5.5,-1.2,'t',fontdict={'size':16})</p>
+								<p></p>plt.text(4,7,r'$\sigma>0$',fontdict={'size':16})</p>
+								<p></p>plt.text(-5.5,7,r'$\sigma<0$',fontdict={'size':16})</p></0>
+								<p></0>plt.text(0,1.5,'C',fontdict={'size':16})</p>
+									<p>plt.plot(t,y)</p>
+										<p>plt.plot(t,y_1)</p>
+											<p>plt.plot(t,y_2)</p>
+												<p>plt.show()</p></0>
+							<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+						</article>
 
 						<!-- About -->
 							<article id="about">

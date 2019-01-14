@@ -1,97 +1,36 @@
-
 # -*- coding: utf-8 -*-
-# 连续时间正弦信号基波频率与周期的关系（$w_1>w_2>w_3$）
+#具有初始相位的正弦信号
+# 导入模块
 import numpy as np
-import pandas as pd
+import matplotlib as mpl
 import matplotlib.pyplot as plt
-import matplotlib
-font = {'family':'SimHei'}
-matplotlib.rc('font',**font)
-matplotlib.rcParams['axes.unicode_minus']=False
-fig = plt.figure()
-plt.subplot(3,2,1)
-ax = plt.gca()
-ax.spines['right'].set_color('none')
-ax.spines['top'].set_color('none')
-ax.xaxis.set_ticks_position('bottom')
-ax.spines['bottom'].set_position(('data', 0))
-ax.yaxis.set_ticks_position('left')
-ax.spines['left'].set_position(('data', 0.6))
-plt.xticks([2],[r'$T_1$'])
+import mpl_toolkits.axisartist as axisartist
+# 绘图
+fig = plt.figure()# 创建画布
+ax = axisartist.Subplot(fig, 111)# 创建绘图区对象ax
+fig.add_axes(ax)# 将绘图区对象添加到画布中
+ax.axis[:].set_visible(False)# 通过set_visible方法设置绘图区所有坐标轴隐藏
+ax.axis["x"] = ax.new_floating_axis(0,0)# 添加新的坐标轴
+ax.axis["x"].set_axisline_style("->", size = 1.0)# 给x轴加上箭头
+ax.axis["y"] = ax.new_floating_axis(1,0)# 添加y轴
+ax.axis["y"].set_axisline_style("-|>", size = 1.0)#y轴加箭头
+ax.axis["x"].set_axis_direction("top")
+ax.axis["y"].set_axis_direction("right") # 设置x、y轴上刻度显示方向
+t = np.arange(-10,10,0.01)
+y = np.cos(t-1)# 函数
+plt.title(r'$x(t)=A\cos(wt+\phi)$',fontsize=10)
+plt.xticks([])
 plt.yticks([])
-plt.title(r'$x_1(t)=\cos(w_1t)$')
-x = np.arange(-3,5,0.1)
-y = np.cos(5*x)
-plt.plot(x,y,color='black')
-plt.subplot(3,2,2)
-ax = plt.gca()
-ax.spines['right'].set_color('none')
-ax.spines['top'].set_color('none')
-ax.xaxis.set_ticks_position('bottom')
-ax.spines['bottom'].set_position(('data', 0))
-ax.yaxis.set_ticks_position('left')
-ax.spines['left'].set_position(('data', 0.6))
-plt.xticks([2],[r'$T_1$'])
-plt.yticks([])
-plt.title('$x_1(t)=\cos(w_1t)$''的傅里叶变换')
-x = np.arange(-3,5,0.1)
-y = np.cos(5*x)
-plt.plot(x,np.fft.fft(y),color='black')
-plt.subplot(3,2,3)
-ax = plt.gca()
-ax.spines['right'].set_color('none')
-ax.spines['top'].set_color('none')
-
-ax.xaxis.set_ticks_position('bottom')
-ax.spines['bottom'].set_position(('data', 0))
-ax.yaxis.set_ticks_position('left')
-ax.spines['left'].set_position(('data', 0.6))
-plt.xticks([2],[r'$T_2$'])
-plt.yticks([])
-plt.title(r'$x_2(t)=\cos(w_2t)$')
-x = np.arange(-3,5,0.1)
-y = np.cos(3*x)
-plt.plot(x,y,color='black')
-plt.subplot(3,2,4)
-ax = plt.gca()
-ax.spines['right'].set_color('none')
-ax.spines['top'].set_color('none')
-ax.xaxis.set_ticks_position('bottom')
-ax.spines['bottom'].set_position(('data', 0))
-ax.yaxis.set_ticks_position('left')
-ax.spines['left'].set_position(('data', 0.6))
-plt.xticks([2],[r'$T_2$'])
-plt.yticks([])
-plt.title('$x_2(t)=\cos(w_2t)$''的傅里叶变换')
-x = np.arange(-3,5,0.1)
-y = np.cos(3*x)
-plt.plot(x,np.fft.fft(y),color='black')
-plt.subplot(3,2,5)
-ax = plt.gca()
-ax.spines['right'].set_color('none')
-ax.spines['top'].set_color('none')
-ax.xaxis.set_ticks_position('bottom')
-ax.spines['bottom'].set_position(('data', 0))
-ax.yaxis.set_ticks_position('left')
-ax.spines['left'].set_position(('data', 0.6))
-plt.xticks([2],[r'$T_3$'])
-plt.yticks([])
-plt.title(r'$x_3(t)=\cos(w_3t)$')
-x = np.arange(-3,5,0.1)
-y = np.cos(x)
-plt.plot(x,y,color='black')
-plt.subplot(3,2,6)
-ax = plt.gca()
-ax.spines['right'].set_color('none')
-ax.spines['top'].set_color('none')
-ax.xaxis.set_ticks_position('bottom')
-ax.spines['bottom'].set_position(('data', 0))
-ax.yaxis.set_ticks_position('left')
-ax.spines['left'].set_position(('data', 0.6))
-plt.xticks([2],[r'$T_3$'])
-plt.yticks([])
-plt.title('$x_3(t)=\cos(w_3t)$''的傅里叶变换')
-x = np.arange(-3,5,0.1)
-y = np.cos(x)
-plt.plot(x,np.fft.fft(y),color='black')
+plt.ylim(-2,2)
+# 标识
+plt.text(-2.5,np.cos(-1),r'$A\cos\phi$',fontdict={'size':14})
+plt.text(0,-0.15,'O',fontdict={'size':14})
+plt.text(0.15,1.90,'x(t)',fontdict={'size':14})
+plt.text(10,-0.15,'t',fontdict={'size':14})
+plt.text(1.2,0.96,'<-------------->',fontdict={'size':14})
+plt.text(np.pi,1.1,r'$T_0=\frac{2\pi}{\omega_0}$',fontdict={'size':14})
+dy = 0.4
+plt.errorbar(1,1,yerr=dy,fmt='o')
+plt.errorbar(1+2*np.pi,1,yerr=dy,fmt='o')
+plt.plot(t,y)
 plt.show()

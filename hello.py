@@ -24,7 +24,7 @@ s = -0.5
 y_1 = np.e**(s*t)
 s = 0
 y_2 = np.e**(s*t)
-plt.title(r'$x(t)=Ce^{st},s=\sigma+jw_0$')# 设置标题（函数名称）
+plt.title(r'$x(t)=Ce^{st},s=\sigma+jw_0$',fontsize=10)# 设置标题（函数名称）
 plt.xticks([])
 plt.yticks([])# 设置样式
 plt.ylim(-0.8,10)# 设置坐标轴范围

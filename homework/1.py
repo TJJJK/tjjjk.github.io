@@ -2,9 +2,20 @@
 # 抽样函数及其傅里叶变换
 
 import numpy as np
-import matplotlib as mpl
+import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib
 import mpl_toolkits.axisartist as axisartist
+font = {'family':'SimHei'}
+matplotlib.rc('font',**font)
+matplotlib.rcParams['axes.unicode_minus']=False
+fig = plt.figure()
+# 第一个图
+plt.subplot(1,2,1)# 画布分为一列两行，取第一个
+matplotlib.rcParams['axes.unicode_minus']=False
+fig = plt.figure()
+# 第一个图
+plt.subplot(1,2,1)
 fig = plt.figure(figsize=(6,6))
 ax = axisartist.Subplot(fig, 111)
 fig.add_axes(ax)

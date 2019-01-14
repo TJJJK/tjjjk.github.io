@@ -22,7 +22,7 @@ plt.text(0,-0.06,'O',fontdict={'size':16})
 plt.text(16.5,-0.06,'t',fontdict={'size':14})
 plt.xticks([])
 plt.yticks([])
-plt.plot(t,y,'b')
+plt.plot(t,y,'b')# 输出函数
 plt.show()
 
 fig = plt.figure(figsize=(6,6))

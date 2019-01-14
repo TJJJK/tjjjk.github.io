@@ -1,36 +1,52 @@
 # -*- coding: utf-8 -*-
-#具有初始相位的正弦信号
-# 导入模块
+# 符号函数及其傅里叶变换
+
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import mpl_toolkits.axisartist as axisartist
-# 绘图
-fig = plt.figure()# 创建画布
-ax = axisartist.Subplot(fig, 111)# 创建绘图区对象ax
-fig.add_axes(ax)# 将绘图区对象添加到画布中
-ax.axis[:].set_visible(False)# 通过set_visible方法设置绘图区所有坐标轴隐藏
-ax.axis["x"] = ax.new_floating_axis(0,0)# 添加新的坐标轴
-ax.axis["x"].set_axisline_style("->", size = 1.0)# 给x轴加上箭头
-ax.axis["y"] = ax.new_floating_axis(1,0)# 添加y轴
-ax.axis["y"].set_axisline_style("-|>", size = 1.0)#y轴加箭头
+fig = plt.figure(figsize=(6,6))
+ax = axisartist.Subplot(fig, 111)
+fig.add_axes(ax)
+ax.axis[:].set_visible(False)
+ax.axis["x"] = ax.new_floating_axis(0,0)
+ax.axis["x"].set_axisline_style("->", size = 1.0)
+ax.axis["y"] = ax.new_floating_axis(1,0)
+ax.axis["y"].set_axisline_style("-|>", size = 1.0)
 ax.axis["x"].set_axis_direction("top")
-ax.axis["y"].set_axis_direction("right") # 设置x、y轴上刻度显示方向
-t = np.arange(-10,10,0.01)
-y = np.cos(t-1)# 函数
-plt.title(r'$x(t)=A\cos(wt+\phi)$',fontsize=10)
+ax.axis["y"].set_axis_direction("right")
+
+t = np.arange(-10,10,0.1)
+y=-1*(t<0)+1*(t>=0)
+plt.text(0,-0.08,'O',fontdict={'size':16})
+plt.text(11,-0.15,'t',fontdict={'size':16})
+plt.text(-0.05,1.7,'sgn(t)',fontdict={'size':16})
+plt.text(-1,1,'1',fontdict={'size':16})
+plt.text(0.7,-1,'-1',fontdict={'size':16})
 plt.xticks([])
 plt.yticks([])
 plt.ylim(-2,2)
-# 标识
-plt.text(-2.5,np.cos(-1),r'$A\cos\phi$',fontdict={'size':14})
-plt.text(0,-0.15,'O',fontdict={'size':14})
-plt.text(0.15,1.90,'x(t)',fontdict={'size':14})
-plt.text(10,-0.15,'t',fontdict={'size':14})
-plt.text(1.2,0.96,'<-------------->',fontdict={'size':14})
-plt.text(np.pi,1.1,r'$T_0=\frac{2\pi}{\omega_0}$',fontdict={'size':14})
-dy = 0.4
-plt.errorbar(1,1,yerr=dy,fmt='o')
-plt.errorbar(1+2*np.pi,1,yerr=dy,fmt='o')
-plt.plot(t,y)
+plt.plot(t,y,'b')
+plt.show()
+
+fig = plt.figure(figsize=(6,6))
+ax = axisartist.Subplot(fig, 111)
+fig.add_axes(ax)
+ax.axis[:].set_visible(False)
+ax.axis["x"] = ax.new_floating_axis(0,0)
+ax.axis["x"].set_axisline_style("->", size = 1.0)
+ax.axis["y"] = ax.new_floating_axis(1,0)
+ax.axis["y"].set_axisline_style("-|>", size = 1.0)
+ax.axis["x"].set_axis_direction("top")
+ax.axis["y"].set_axis_direction("right")
+t = np.arange(-10,10,0.1)
+y=-1*(t<0)+1*(t>=0)
+plt.text(0,-0.08,'O',fontdict={'size':16})
+plt.text(2,0.01,r'$\omega$',fontdict={'size':16})
+plt.text(0,1,'sgn(t)',fontdict={'size':16})
+plt.xticks([])
+plt.yticks([])
+plt.xlim(-2,2)
+plt.ylim(-2,1)
+plt.plot(t,np.fft.fft(y),'b')
 plt.show()

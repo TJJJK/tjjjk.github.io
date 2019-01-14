@@ -8,6 +8,12 @@
 
 /* Begin PBXFileReference section */
 		66F16B2221EC30DE00A52DD1 /* 1.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = 1.py; sourceTree = "<group>"; };
+		66F16B2321EC6E4B00A52DD1 /* 具有初始相位的正弦信号.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "具有初始相位的正弦信号.py"; sourceTree = "<group>"; };
+		66F16B2421EC6E7B00A52DD1 /* 连续时间实指数信号.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "连续时间实指数信号.py"; sourceTree = "<group>"; };
+		66F16B2521EC6EB300A52DD1 /* 单位阶跃信号及其傅里叶变换.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "单位阶跃信号及其傅里叶变换.py"; sourceTree = "<group>"; };
+		66F16B2621EC6EDE00A52DD1 /* 符号函数及其傅里叶变换.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "符号函数及其傅里叶变换.py"; sourceTree = "<group>"; };
+		66F16B2721EC6EF200A52DD1 /* 冲激信号.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "冲激信号.py"; sourceTree = "<group>"; };
+		66F16B2821EC6F0900A52DD1 /* 抽样函数及其傅里叶变换.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "抽样函数及其傅里叶变换.py"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -15,6 +21,12 @@
 			isa = PBXGroup;
 			children = (
 				66F16B2221EC30DE00A52DD1 /* 1.py */,
+				66F16B2821EC6F0900A52DD1 /* 抽样函数及其傅里叶变换.py */,
+				66F16B2721EC6EF200A52DD1 /* 冲激信号.py */,
+				66F16B2621EC6EDE00A52DD1 /* 符号函数及其傅里叶变换.py */,
+				66F16B2521EC6EB300A52DD1 /* 单位阶跃信号及其傅里叶变换.py */,
+				66F16B2421EC6E7B00A52DD1 /* 连续时间实指数信号.py */,
+				66F16B2321EC6E4B00A52DD1 /* 具有初始相位的正弦信号.py */,
 			);
 			sourceTree = "<group>";
 		};
